@@ -8,9 +8,7 @@ Note:
 
 	- When creating a new connection in airflow GUI, fill up Conn Id as "is3107_connection" instead of "my_gcp_connection"
 
-
 ## Setting up the Google Authentication with the cloud bucket:
-
 Get the JSON credential file for authentication and set the file path in "os.environ["GOOGLE_APPLICATION_CREDENTIALS"]"
 
 Make sure that your account has Admin role
@@ -21,7 +19,6 @@ dataset_id = 'data'
 table_ids = ['flight_delay', 'weather_data']
 
 ## 'flight_delay' table in Google Bigquery
-
 Source URL: gs://gcf-sources-769425010528-us-central1/flight_delay.csv
 
 Schema:
@@ -75,7 +72,6 @@ Schema:
 | outlier | INTEGER | NULLABLE |	
 | status | STRING | NULLABLE |
 
-
 ## 'weather_data' table in Google Bigquery
 
 Source URL: gs://gcf-sources-769425010528-us-central1/weather.csv
@@ -84,36 +80,41 @@ Schema:
 
 | Field | Type | Nullable |
 | --- | --- | --- |
-city			          STRING	NULLABLE			
-clouds_all		      STRING	NULLABLE			
-dt			            STRING	NULLABLE			
-dt_txt			        STRING	NULLABLE			
-main_feels_like		  STRING	NULLABLE			
-main_grnd_level		  STRING	NULLABLE			
-main_humidity		    STRING	NULLABLE			
-main_pressure	    	STRING	NULLABLE			
-main_sea_level		  STRING	NULLABLE			
-main_temp		        STRING	NULLABLE			
-main_temp_kf		    STRING	NULLABLE			
-main_temp_max		    STRING	NULLABLE			
-main_temp_min		    STRING	NULLABLE			
-pop			            STRING	NULLABLE			
-sys_pod			        STRING	NULLABLE			
-visibility		      STRING	NULLABLE			
-weather_description	STRING	NULLABLE			
-weather_icon		    STRING	NULLABLE			
-weather_id		      STRING	NULLABLE			
-weather_main		    STRING	NULLABLE			
-wind_deg		        STRING	NULLABLE			
-wind_gust		        STRING	NULLABLE			
-wind_speed		      STRING	NULLABLE
+| city | STRING | NULLABLE |			
+| clouds_all | STRING | NULLABLE |			
+| dt | STRING | NULLABLE |			
+| dt_txt | STRING | NULLABLE |			
+| main_feels_like | STRING | NULLABLE |			
+| main_grnd_level | STRING | NULLABLE |		
+| main_humidity | STRING | NULLABLE |			
+| main_pressure | STRING | NULLABLE |			
+| main_sea_level | STRING | NULLABLE |			
+| main_temp |  STRING | NULLABLE |		
+| main_temp_kf | STRING | NULLABLE |			
+|main_temp_max | STRING | NULLABLE |			
+|main_temp_min | STRING | NULLABLE |			
+|pop | STRING | NULLABLE |	
+|sys_pod | STRING | NULLABLE |			
+|visibility |  STRING | NULLABLE |			
+|weather_description | STRING | NULLABLE |			
+|weather_icon | STRING | NULLABLE |		
+|weather_id | STRING | NULLABLE |		
+|weather_main | STRING | NULLABLE |			
+|wind_deg | STRING | NULLABLE |			
+|wind_gust | STRING | NULLABLE |			
+|wind_speed | STRING | NULLABLE |
 
-Setting up the Google Cloud Bucket
-URL for export model: 'gs://deploy_models/model'	
+## Setting up the Google Cloud Bucket
+
+URL for export model: 'gs://deploy_models/model'
+
 URL for flight_delay to be inserted: 'gs://gcf-sources-769425010528-us-central1/flight_delay.csv'
+
 URL for weather_data to be inserted: 'gs://gcf-sources-769425010528-us-central1/weather.csv'
 
-Setting up API Keys to extract data
+## Setting up API Keys to extract data
+
 Flight_Delay: https://airlabs.co/signin
+
 Weather_Data: https://openweathermap.org/home/sign_in
 
