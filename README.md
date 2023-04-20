@@ -1,4 +1,4 @@
-# data_engineering_group5
+# IS3107 Data Engineering AY22/23 | Group 5
 # Batch Layer
 
 ## Setting up Airflow connection to Google BigQuery:
@@ -118,3 +118,34 @@ Flight_Delay: https://airlabs.co/signin
 
 Weather_Data: https://openweathermap.org/home/sign_in
 
+# Speed Layer
+
+## Setting Up Kafka
+
+Site references:<br>
+https://kafka.apache.org/quickstart#quickstart_createtopic <br>
+https://medium.com/the-research-nest/creating-a-real-time-data-stream-using-apache-kafka-in-python-132e0e5630d3 <br>
+
+### Setting up streaming data 
+1. Download Kafka as per first site reference, pip install necessary dependencies
+2. Go to location where Kafka is installed
+3. Run zookeeper in terminal: ```bin/zookeeper-server-start.sh config/zookeeper.properties```
+4. Run Kafka in a new terminal: ```bin/kafka-server-start.sh config/server.properties```
+5. If a you want to create a new topic run this in a new terminal: <br>
+```bin/kafka-topics.sh --create --topic TOPIC_NAME --bootstrap-server localhost:9092```
+6. Run ```producer.py``` to start collecting data and sending it to the kafka server <br>
+7. Run ```consumer.py``` to start retrieving data from kafka server
+
+## How our Speed Layer works
+• Run producer.py and consumer.py simultaneously to generate, process and make predictions on our stream data <br>
+• ```producer.py``` file works by generating our data and sending them to the relevant Kafka topic <br>
+• ```consumer.py``` reads this data and performs predictions on it with our latest pre-trained logistic regression model <br>
+• This data is then sent to Tableau for visualisation purposes using a MongoDB connector <br>
+
+# Tableau Dashboard
+## Some Notes
+• Link to dashboard: [https://prod-apsoutheast-a.online.tableau.com/#/site/is3107group5/workbooks/232318/views](https://prod-apsoutheast-a.online.tableau.com/#/site/is3107group5/workbooks/232318/views) <br>
+• Desktop copy (.twbx file) requires access to Google BigQuery account (see above) <br>
+• Desktop copy (.twbx file) requires user to setup a MongoDB connector within Tableau in order for our stream data to be visualised <br>
+• For ease of use, we have supplied a ```sample_data.xlsx``` to be read by Tableau to replicate the same output generated and tested by our Speed Layer <br>
+• Ensure this Excel file's path is set correctly within Tableau's data sources <br>
