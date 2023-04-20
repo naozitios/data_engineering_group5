@@ -1,0 +1,10 @@
+light rain
+overcast clouds
+heavy intensity rain
+moderate rain
+light snow
+few clouds
+broken clouds
+null
+clear sky
+scattered clouds
