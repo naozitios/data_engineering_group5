@@ -1,7 +1,9 @@
 # data_engineering_group5
 # Batch Layer
 Setting up Airflow connection to Google BigQuery:
+
 Follow the steps in https://cloud.google.com/composer/docs/how-to/managing/connections, under the "Creating new Airflow connections" header
+
 Note:
 	When creating a new connection in airflow GUI, fill up Conn Id as "is3107_connection" instead of "my_gcp_connection"
 
