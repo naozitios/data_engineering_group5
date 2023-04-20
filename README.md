@@ -20,67 +20,70 @@ project_id = 'is3107-380701'
 dataset_id = 'data'
 table_ids = ['flight_delay', 'weather_data']
 
-### 'flight_delay' table:
+## 'flight_delay' table in Google Bigquery
 
 Source URL: gs://gcf-sources-769425010528-us-central1/flight_delay.csv
 
 Schema:
 
-| Field | Type | String |
+| Field | Type | Nullable |
 | --- | --- | --- |
 | aircraft_icao | STRING | NULLABLE |
+| airline_iata | STRING | NULLABLE | 		
+| airline_icao | STRING | NULLABLE |			
+| arr_actual | STRING | NULLABLE |		
+| arr_actual_ts | STRING | NULLABLE |		
+| arr_actual_utc | STRING | NULLABLE			
+| arr_baggage | STRING | NULLABLE |		
+| arr_city | STRING | NULLABLE |		
+| arr_delayed | STRING | NULLABLE |			
+| arr_estimated | STRING | NULLABLE |			
+| arr_estimated_ts | STRING | NULLABLE |		
+| arr_estimated_utc | STRING | NULLABLE	|		
+| arr_gate | STRING | NULLABLE |		
+| arr_iata | STRING | NULLABLE |		
+| arr_icao | STRING | NULLABLE |		
+| arr_terminal | STRING | NULLABLE |		
+| arr_time | STRING | NULLABLE |			
+| arr_time_ts | STRING | NULLABLE |			
+| arr_time_utc | STRING	| NULLABLE |			
+| arr_time_utc_3hr | STRING | NULLABLE |		
+| cs_airline_iata | STRING | NULLABLE |		
+| cs_flight_iata | STRING | NULLABLE |		
+| cs_flight_number | STRING | NULLABLE |		
+| delayed | FLOAT | NULLABLE |			
+| dep_actual | STRING | NULLABLE |			
+| dep_actual_ts | STRING | NULLABLE |			
+| dep_actual_utc | STRING | NULLABLE |			
+| dep_city | STRING | NULLABLE |			
+| dep_delayed | STRING | NULLABLE |			
+| dep_estimated | STRING | NULLABLE |			
+| dep_estimated_ts | STRING | NULLABLE |		
+| dep_estimated_utc | STRING | NULLABLE |		
+| dep_gate | STRING | NULLABLE |		
+| dep_iata | STRING | NULLABLE |		
+| dep_icao | STRING | NULLABLE |		
+| dep_terminal | STRING | NULLABLE |		
+| dep_time | STRING | NULLABLE |			
+| dep_time_ts | STRING | NULLABLE |		
+| dep_time_utc | TIMESTAMP | NULLABLE |		
+| dep_time_utc_3hr | STRING | NULLABLE |	
+| duration | FLOAT |NULLABLE |		
+| flight_iata | STRING | NULLABLE |		
+| flight_icao | STRING | NULLABLE |		
+| flight_number | STRING | NULLABLE |		
+| outlier | INTEGER | NULLABLE |	
+| status | STRING | NULLABLE |
 
 
-airline_iata		  STRING		NULLABLE			
-airline_icao		  STRING		NULLABLE			
-arr_actual		    STRING		NULLABLE			
-arr_actual_ts		  STRING		NULLABLE			
-arr_actual_utc	  STRING		NULLABLE			
-arr_baggage		    STRING		NULLABLE			
-arr_city		      STRING		NULLABLE			
-arr_delayed		    STRING		NULLABLE			
-arr_estimated		  STRING		NULLABLE			
-arr_estimated_ts	STRING		NULLABLE			
-arr_estimated_utc	STRING		NULLABLE			
-arr_gate		      STRING		NULLABLE			
-arr_iata		      STRING		NULLABLE			
-arr_icao		      STRING		NULLABLE			
-arr_terminal		  STRING		NULLABLE			
-arr_time		      STRING		NULLABLE			
-arr_time_ts		    STRING		NULLABLE			
-arr_time_utc		  STRING		NULLABLE			
-arr_time_utc_3hr	STRING		NULLABLE			
-cs_airline_iata		STRING		NULLABLE			
-cs_flight_iata		STRING		NULLABLE			
-cs_flight_number	STRING		NULLABLE			
-delayed			      FLOAT		  NULLABLE			
-dep_actual		    STRING		NULLABLE			
-dep_actual_ts		  STRING		NULLABLE			
-dep_actual_utc		STRING		NULLABLE			
-dep_city		      STRING		NULLABLE			
-dep_delayed		    STRING		NULLABLE			
-dep_estimated		  STRING		NULLABLE			
-dep_estimated_ts	STRING		NULLABLE			
-dep_estimated_utc	STRING		NULLABLE			
-dep_gate		      STRING		NULLABLE			
-dep_iata		      STRING		NULLABLE			
-dep_icao		      STRING		NULLABLE			
-dep_terminal		  STRING		NULLABLE			
-dep_time		      STRING		NULLABLE			
-dep_time_ts		    STRING		NULLABLE			
-dep_time_utc		  TIMESTAMP	NULLABLE			
-dep_time_utc_3hr	STRING		NULLABLE			
-duration		      FLOAT		  NULLABLE			
-flight_iata		    STRING		NULLABLE			
-flight_icao		    STRING		NULLABLE			
-flight_number		  STRING		NULLABLE			
-outlier			      INTEGER		NULLABLE			
-status			      STRING		NULLABLE	
+## 'weather_data' table in Google Bigquery
 
-
-'weather_data' table:
 Source URL: gs://gcf-sources-769425010528-us-central1/weather.csv
+
 Schema:
+
+| Field | Type | Nullable |
+| --- | --- | --- |
 city			          STRING	NULLABLE			
 clouds_all		      STRING	NULLABLE			
 dt			            STRING	NULLABLE			
