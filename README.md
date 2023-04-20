@@ -26,8 +26,9 @@ Source URL: gs://gcf-sources-769425010528-us-central1/flight_delay.csv
 
 Schema:
 
-| Field | Type | String |
-| aircraft_icao | STRING | NULLABLE			
+| Field         | Type   | String   |
+| aircraft_icao | STRING | NULLABLE |
+
 airline_iata		  STRING		NULLABLE			
 airline_icao		  STRING		NULLABLE			
 arr_actual		    STRING		NULLABLE			
