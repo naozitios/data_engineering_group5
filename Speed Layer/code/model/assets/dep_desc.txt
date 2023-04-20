@@ -1,0 +1,9 @@
+snow
+moderate rain
+light rain
+scattered clouds
+clear sky
+few clouds
+overcast clouds
+_null_filler
+broken clouds

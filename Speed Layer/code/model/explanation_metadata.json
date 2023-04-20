@@ -1,0 +1,48 @@
+{
+  "outputs": {
+    "target_logits": {
+      "output_tensor_name": "Add:0"
+    }
+  },
+  "inputs": {
+    "dep_time_float": {
+      "input_tensor_name": "dep_time_float:0",
+      "encoding": "identity",
+      "modality": "numeric"
+    },
+    "duration": {
+      "input_tensor_name": "duration:0",
+      "encoding": "identity",
+      "modality": "numeric"
+    },
+    "airline_iata": {
+      "input_tensor_name": "airline_iata:0",
+      "encoding": "identity",
+      "modality": "numeric"
+    },
+    "arr_desc": {
+      "input_tensor_name": "arr_desc:0",
+      "encoding": "identity",
+      "modality": "numeric"
+    },
+    "arr_iata": {
+      "input_tensor_name": "arr_iata:0",
+      "encoding": "identity",
+      "modality": "numeric"
+    },
+    "dep_desc": {
+      "input_tensor_name": "dep_desc:0",
+      "encoding": "identity",
+      "modality": "numeric"
+    },
+    "dep_iata": {
+      "input_tensor_name": "dep_iata:0",
+      "encoding": "identity",
+      "modality": "numeric"
+    }
+  },
+  "framework": "Tensorflow",
+  "tags": [
+    "explainable_ai_sdk"
+  ]
+}
