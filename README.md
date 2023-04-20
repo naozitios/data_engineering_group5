@@ -108,9 +108,9 @@ Schema:
 
 URL for export model: 'gs://deploy_models/model'
 
-URL for flight_delay to be inserted: 'gs://insert_bucket_name/flight_delay.csv'
+URL for flight_delay to be inserted: 'gs://gcf-sources-769425010528-us-central1/flight_delay.csv'
 
-URL for weather_data to be inserted: 'gs://insert_bucket_name/weather.csv'
+URL for weather_data to be inserted: 'gs://gcf-sources-769425010528-us-central1/weather.csv'
 
 ## Setting up API Keys to extract data
 
