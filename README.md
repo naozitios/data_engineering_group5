@@ -13,9 +13,12 @@ Get the JSON credential file for authentication and set the file path in "os.env
 
 Make sure that your account has Admin role
 
-Setting up Google Bigquery Tables\n
+Setting up Google Bigquery Tables
+
 project_id = 'is3107-380701'
+
 dataset_id = 'data'
+
 table_ids = ['flight_delay', 'weather_data']
 
 ## 'flight_delay' table in Google Bigquery
